@@ -6,9 +6,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-ShirtSize.destroy
+ShirtSize.destroy_all
 
-ShirtType.destroy
+ShirtType.destroy_all
 
 ShirtSize.create([{ name: 'P' }, { name: 'M' }, { name: 'G' }, { name: 'GG' }, { name: 'GGG' }, { name: 'GGGG' }])
 
