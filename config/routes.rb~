@@ -8,12 +8,6 @@ BaquetaAdm::Application.routes.draw do
 
   get "shirt_types/new"
 
-  get "/users/js/bootstrap.min.js"
-  
-  get "/js/bootstrap.min.js"
-
-  
-
   resources :users do
     member do
       post :notify_user
