@@ -7,8 +7,6 @@ BaquetaAdm::Application.routes.draw do
   get "shirt_sizes/new"
 
   get "shirt_types/new"
-
-  get "/users/js/bootstrap.min.js"
   
   get "/js/bootstrap.min.js"
 
