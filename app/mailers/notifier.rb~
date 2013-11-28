@@ -11,6 +11,6 @@ class Notifier < ActionMailer::Base
     @sender_name = @user.name_tag
     
 
-    mail to:@user.email, :subject => "Cadastro efetuado com sucesso! =)"
+    mail to:"gustavoagomes@gmail.com", :subject => "Cadastro efetuado com sucesso! =)"
   end
 end
