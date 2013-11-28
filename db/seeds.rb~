@@ -6,11 +6,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-  size = ShirtSize.create([{ name: 'P' }, { name: 'M' }, { name: 'G' }, { name: 'GG' }, { name: 'GGG' }, { name: 'GGGG' }])
+ShirtSize.create([{ name: 'P' }, { name: 'M' }, { name: 'G' }, { name: 'GG' }, { name: 'GGG' }, { name: 'GGGG' }])
 
-  size.save
 
-  ShirtType.create([{ name: 'MASCULINA' }, { name: 'BABYLOOK' }])
 
-  type.save
+ShirtType.create([{ name: 'MASCULINA' }, { name: 'BABYLOOK' }])
 
