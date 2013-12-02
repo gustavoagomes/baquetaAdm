@@ -64,7 +64,7 @@
 		<div class="col-md-3">
 		  <div class="form-group">
 		    <%= f.label :birthdate %> <br />
-		    <%= f.text_field :birthdate, :type=>"date", :class=>"form-control datepicker", :placeholder=>"dd/mm/aaaa" %>
+		    <%= f.text_field :birthdate, :class=>"form-control datepicker", :placeholder=>"dd/mm/aaaa" %>
 		
 		  </div>
 		</div>		
@@ -104,15 +104,20 @@
    	</div>  
 <script type="text/javascript">
   $(document).ready(function() {
+   
+    $(".datepicker" ).datepicker({ dateFormat: "dd/mm/yy" });
+    
+   
+   /*
    $('.datepicker').datepicker({
    	  format:"dd/mm/yyyy",
    	  language: "pt-BR",
    	  autoclose: true,
    	  todayHighlight: true
-   })
-     .on('changeDate', function(ev){
-     	$('.datepicker').datepicker('hide');
-     });	
+   })*/
+   //.on('changeDate', function(ev){
+    // 	$('.datepicker').datepicker('hide');
+    // });	
   });  
   //$('.selectpicker').selectpicker();
   // $('select').selectpicker({
