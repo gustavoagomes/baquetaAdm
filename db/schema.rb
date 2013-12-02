@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131129154406) do
+ActiveRecord::Schema.define(:version => 20131202160755) do
 
   create_table "instruments", :force => true do |t|
     t.string   "name"
@@ -37,8 +37,6 @@ ActiveRecord::Schema.define(:version => 20131129154406) do
     t.date     "birthdate"
     t.string   "address"
     t.string   "neighborhood"
-    t.integer  "phone_number"
-    t.integer  "cell_phone"
     t.string   "is_active"
     t.float    "monthly_payment"
     t.text     "obs"
@@ -48,6 +46,8 @@ ActiveRecord::Schema.define(:version => 20131129154406) do
     t.integer  "shirt_type_id"
     t.integer  "shirt_size_id"
     t.integer  "instrument_id"
+    t.string   "cell_phone"
+    t.string   "phone_number"
   end
 
 end

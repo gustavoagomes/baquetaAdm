@@ -15,16 +15,16 @@
 #ShirtSize.create([{ name: 'P' }, { name: 'M' }, { name: 'G' }, { name: 'GG' }, { name: 'GGG' }, { name: 'GGGG' }])
 #ShirtType.create([{ name: 'MASCULINA' }, { name: 'BABYLOOK' }])
 
-Instrument.create([{ name: 'AGOGÔ'}, 
-                   { name: 'CAIXA' },
-                   { name: 'CHOCALHO' },
-                   { name: 'CUÍCA' },
-                   { name: 'MARCAÇÃO' },
-                   { name: 'RECO-RECO' },
-                   { name: 'REPICAIXA' },
-                   { name: 'REPIQUE' },
-                   { name: 'TAMBORIM' },
-                   { name: 'TANTAM' }
-                 ])
+#Instrument.create([{ name: 'AGOGÔ'}, 
+#                   { name: 'CAIXA' },
+#                   { name: 'CHOCALHO' },
+#                   { name: 'CUÍCA' },
+#                   { name: 'MARCAÇÃO' },
+#                   { name: 'RECO-RECO' },
+#                   { name: 'REPICAIXA' },
+#                   { name: 'REPIQUE' },
+#                   { name: 'TAMBORIM' },
+#                   { name: 'TANTAM' }
+#                 ])
 
-
+User.destroy_all
