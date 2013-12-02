@@ -83,7 +83,13 @@
 	</div>	
 	
 	<div class="row">
-		<div class="col-md-3">
+		<div class="col-md-5"> 
+		  <div class="form-group">
+		    <%= f.label :instrument_id %> <br/>
+		    <%= f.select(:instrument_id, Instrument.all.collect {|p| [ p.name, p.id ] }, { include_blank: true }, :class => "form-control") %>
+		  </div>
+        	</div>  
+		<div class="col-md-4">
 		  
 		    <%= f.label :shirt_type_id %><br/>
 		    <%= f.select(:shirt_type_id, ShirtType.all.collect {|p| [ p.name, p.id ] }, { include_blank: true }, :class => "form-control") %>
@@ -93,19 +99,12 @@
 <!-- :placeholder=>"Tipo de Camisa" -->
 		  
 		</div>
-		<div class="col-md-5">
+		<div class="col-md-3">
 		  <div class="form-group">
 		    <%= f.label :shirt_size_id %> <br/>
 		    <%= f.select(:shirt_size_id, ShirtSize.all.collect {|p| [ p.name, p.id ] }, { include_blank: true }, :class => "form-control") %>
 		  </div>
 		</div>
-		<div class="col-md-4">
-		  <div class="form-group">
-		    <%= f.label :instrument_id %> <br/>
-		    <%= f.select(:instrument_id, Instrument.all.collect {|p| [ p.name, p.id ] }, { include_blank: true }, :class => "form-control") %>
-		  </div>
-
-	</div>  
   
 <script type="text/javascript">
   $(document).ready(function() {
