@@ -1,12 +1,8 @@
-<html>
-  <body>
-	<p>
-		<b><%= @sender_name %></b>, seu cadastro foi efetuado com sucesso no site do Baqueta. 
-	</p>
-	<p>
-		Seguem abaixo os dados informados por vc.		
-	</p>
-
+<div class="panel panel-success">
+	<div class="panel-heading">
+		<p id="notice"><%= notice %></p>	
+	</div>	
+	<p> </p>	
 	<p>
 	  <b>Nome:</b>
 	  <%= @user.name %>
@@ -29,7 +25,8 @@
 	</p>
 	<p>
 	  <b>Data de Nascimento:</b>
-	  <%= @user.birthdate == nil ? "" : I18n.l(@user.birthdate) %> 
+	  <%=  @user.birthdate == nil ? "" : I18n.l(@user.birthdate) %>
+	  
 	</p>
 	<p>
 	  <b>Telefone:</b>
@@ -47,9 +44,11 @@
 	  <b>Tamanho:</b>
 	  <%= @user.shirt_size.name %>
 	</p>
-	<p>
-	  <b>Instrumento:</b>
-	  <%= @user.instrument.name %>
-	</p>
-  </body>
-</html>
+	
+	<!--
+	<%= link_to 'Editar', edit_user_path(@user) %> |
+	<%= link_to 'Voltar', users_path %>
+	-->
+</div>
+
+

@@ -211,11 +211,12 @@ pt:
         phone_number: Telefone
         cell_phone: Celular
         is_active: Ativo?
-        shirt_type: Tipo de Camisa
-        shirt_size_id: Tamanho da Camisa id
+        shirt_type_id: Tipo de Camisa
+        shirt_size_id: Tamanho da Camisa
+        instrument_id: Instrumento
         shirt_size: Tamanho da Camisa
         monthly_payment: Mensalidade
-        obs: OBS 
+        obs: OBS 	
         published_at: "Publicado em"
         
       

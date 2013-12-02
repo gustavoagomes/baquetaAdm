@@ -84,16 +84,24 @@
 	
 	<div class="row">
 		<div class="col-md-3">
-		  <div class="form-group">
-		    <%= f.label :shirt_type_code %><br/>
-		    <%= f.select :shirt_type_code, (["MASCULINA", "BABYLOOK"]), :include_blank => 'Selecione o Tipo', :class=>"select"  %>
+		  
+		    <%= f.label :shirt_type_id %><br/>
+		    <%= f.select(:shirt_type_id, ShirtType.all.collect {|p| [ p.name, p.id ] }, { include_blank: true }, :class => "form-control") %>
+
+		    <!-- select("post", "person_id", Person.all.collect {|p| [ p.name, p.id ] }, { include_blank: true }) -->
+	    
 <!-- :placeholder=>"Tipo de Camisa" -->
-		  </div>
+		  
 		</div>
-		<div class="col-md-8">
+		<div class="col-md-5">
 		  <div class="form-group">
-		    <%= f.label :shirt_size_code %> <br/>
-		    <%= f.select :shirt_size_code, (["P", "M", "G"]), :include_blank => 'Selecione o Tamanho', :class=>"form-control selectpicker", :placeholder=>"Tamanho da Camisa" %>
+		    <%= f.label :shirt_size_id %> <br/>
+		    <%= f.select(:shirt_size_id, ShirtSize.all.collect {|p| [ p.name, p.id ] }, { include_blank: true }, :class => "form-control") %>
+		  </div>
+		<div class="col-md-4">
+		  <div class="form-group">
+		    <%= f.label :instrument_id %> <br/>
+		    <%= f.select(:instrument_id, Instrument.all.collect {|p| [ p.name, p.id ] }, { include_blank: true }, :class => "form-control") %>
 		  </div>
 		</div>
 	</div>  
@@ -111,10 +119,10 @@
      });	
   });  
   //$('.selectpicker').selectpicker();
-   $('select').selectpicker({
-        autoclose: true
-        show: true
-   });
+  // $('select').selectpicker({
+   //     autoclose: true,
+    //    show: true
+   //});
   //$('#shirt_type_code').selectpicker();
   //$('#shirt_size_code').selectpicker();
 

@@ -4,7 +4,7 @@
 		<b><%= @sender_name %></b>, seu cadastro foi efetuado com sucesso no site do Baqueta. 
 	</p>
 	<p>
-		Caso vc queira alterar alguma informação, envie um e-mail para baqueta@blocodobaqueta.com.br informando apenas as mudanças.		
+		Seguem abaixo os dados informados por vc.		
 	</p>
 
 	<p>
@@ -41,7 +41,7 @@
 	</p>
 	
 	  <b>Tipo de Camisa:</b>
-	  <%= @user.shirt_size.shirt_type.name %>
+	  <%= @user.shirt_type.name %>
 	</p>
 	<p>
 	  <b>Tamanho:</b>

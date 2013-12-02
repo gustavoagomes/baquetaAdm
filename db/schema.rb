@@ -11,7 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131123160951) do
+ActiveRecord::Schema.define(:version => 20131129154406) do
+
+  create_table "instruments", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "shirt_sizes", :force => true do |t|
     t.string   "name"
@@ -41,6 +47,7 @@ ActiveRecord::Schema.define(:version => 20131123160951) do
     t.string   "email"
     t.integer  "shirt_type_id"
     t.integer  "shirt_size_id"
+    t.integer  "instrument_id"
   end
 
 end
