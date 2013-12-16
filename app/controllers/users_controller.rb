@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   # GET /users
-  # GET /users.json 
+  # GET /users.json   
   def index
     @users = User.order(:branch_id, :shirt_type_id, :shirt_size_id, :instrument_id, :name )
     

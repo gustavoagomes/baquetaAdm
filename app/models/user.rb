@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
    belongs_to :shirt_size
    belongs_to :shirt_type
    belongs_to :instrument
-   belongs_to :branch 
+   belongs_to :branch  
 
 
   def self.to_csv(options = {})
