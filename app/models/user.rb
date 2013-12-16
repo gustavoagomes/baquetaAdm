@@ -19,7 +19,6 @@ class User < ActiveRecord::Base
       #csv << column_names
       csv << ["Nome", "Nome no Cracha", "Instrumento", "Tipo de Camisa", "Tamanho da Camisa", "Unidade"]
       all.each do |user|
-        #csv << "#{user.name},#{user.instrument.name}" 
         #csv << user.attributes.values_at(name) + user.attributes.values_at(instrument.name)
         #csv << user.attributes.values_at(*column_names)
         csv << [user.name, user.name_tag, user.instrument.name, user.shirt_type.name, user.shirt_size.name, user.branch.name]
