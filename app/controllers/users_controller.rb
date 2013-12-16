@@ -3,11 +3,13 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
-
+    @users = User.order(:branch_id, :shirt_type_id, :shirt_size_id, :instrument_id, :name )
+    
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @users }
+      #format.json { render json: @users }
+      format.csv { send_data @users.to_csv }
+           
     end
   end
 
@@ -19,6 +21,7 @@ class UsersController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @user }
+      format.csv { send_data @users.to_csv }
     end
   end
 

@@ -1,29 +1,36 @@
-<h1>Cadastro de Integrantes do BA-QUE-TA! (TUM)</h1>
+<div class="panel panel-primary">
+  <div class="panel panel-heading"><h2>Integrantes</h2></div>
+	
+	<table class="table table-striped table-condensed">
+	  <tr>
+	    <th>Nome Completo</th>
+	    <th>Nome no Crachá</th>
+	    <th>E-mail</th>
+	    <th>Instrumento</th>
+	    <th>Tipo de Camisa</th>
+	    <th>Tamanho da Camisa</th>
+	  </tr>
+	
+	<% @users.each do |user| %>
+	  <tr>
+	    <td><%= user.name %></td>
+	    <td><%= user.name_tag %></td>
+	    <td><%= user.email %></td>
+	    <td><%= user.instrument.name %></td>
+	    <td><%= user.shirt_type.name %></td>
+	    <td><%= user.shirt_size.name %></td>
+	  </tr>
+	<% end %>
 
+</div>
 
-
-<h2>Informe aqui o tamanho de sua camisa e outros dados.</h2>
-
-<!--<table>
-  <tr>
-    <th>Nome Completo</th>
-    <th>Nome no Crachá</th>
-    <th>E-mail</th>
-    <th>Celular</th>
-  </tr>
-
-<% @users.each do |user| %>
-  <tr>
-    <td><%= link_to user.name, edit_user_path(user) %></td>
-    <td><%= user.name_tag %></td>
-    <td><%= user.email %></td>
-    <td><%= user.cell_phone %></td>
-    <td><%= link_to 'Mostrar', user %></td>
-    <td><%= link_to 'Excluir', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>-->
+</table>
 
 <br />
 
-<%= link_to 'Quero Me Cadastrar :D', new_user_path %>
+<!--<%= link_to 'Gerar CSV', users_path(format: "csv") %>-->
+
+<p>
+  <a class="btn btn-lg btn-primary" href="/users.csv" role="button" >Gerar CSV</a>
+</p>
+

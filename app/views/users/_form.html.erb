@@ -1,7 +1,7 @@
 <%= form_for(@user,{:role=>"form"}) do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+      <h2><%= pluralize(@user.errors.count, "error") %> encontrado(s) ao tentar Salvar:</h2>
 
       <ul>
       <% @user.errors.full_messages.each do |msg| %>
@@ -83,13 +83,19 @@
 	</div>	
 	
 	<div class="row">
-		  <div class="col-md-5">
+		  <div class="col-md-3">
+		  	<div class="form-group">		  
+  		      <%= f.label :branch_id %> <br/>
+		      <%= f.select(:branch_id, Branch.all.collect {|p| [ p.name, p.id ] }, { include_blank: true }, :class => "form-control") %>
+		    </div>
+		  </div>  
+		  <div class="col-md-3">
 		  	<div class="form-group">		  
   		      <%= f.label :instrument_id %> <br/>
 		      <%= f.select(:instrument_id, Instrument.all.collect {|p| [ p.name, p.id ] }, { include_blank: true }, :class => "form-control") %>
 		    </div>
 		  </div>  
-	      <div class="col-md-4">	
+	      <div class="col-md-3">	
 	      	<div class="form-group">	  
 		      <%= f.label :shirt_type_id %><br/>
 		      <%= f.select(:shirt_type_id, ShirtType.all.collect {|p| [ p.name, p.id ] }, { include_blank: true }, :class => "form-control") %>
@@ -134,31 +140,5 @@
 	  <a class="btn btn-lg btn-primary" href="#" role="button" onclick="document.getElementById('new_user').submit(); return false">Salvar</a>
 	</p>
 
-<!--  <div class="actions">
-    <%= f.submit %>
-</div> 
 
-$("#shirt_type_id").change(function() {
-      getShirtSizeByType("id="+$("#shirt_type_id").val());
-    });
-      var options = '<option value="">Selecione o Tamanho</option>';
-      $.each(j.siz, function(i, item) {
-        options += '<option value="' + item.id + '">' + item.n + '</option>';
-    $("#shirt_type_id").change(function() {
-      getShirtSizeByType("id="+$("#shirt_type_id").val());
-    });
-    
-    
-
-  function getShirtSizeByType(id) {
-    $.getJSON("/size_by_type", id, function(j) {
-      var options = '<option value="">Selecione o Tamanho</option>';
-      $.each(j.siz, function(i, item) {
-        options += '<option value="' + item.id + '">' + item.n + '</option>';
-      });
-      $("#user_shirt_size_id").html(options);
-    });
-  }
-
--->
 <% end %>

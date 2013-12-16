@@ -8,10 +8,10 @@ BaquetaAdm::Application.routes.draw do
 
   get "shirt_types/new"
   
-
   resources :users do
     member do
       post :notify_user
+ #     get "show"
     end
   end
   

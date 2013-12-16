@@ -39,17 +39,21 @@
 	  <b>Celular:</b>
 	  <%= @user.cell_phone %>
 	</p>
-	
+	<p>
+	  <b>Unidade:</b>
+	  <%= @user.branch.name %>
+	</p>	
+	<p>
+	  <b>Instrumento:</b>
+	  <%= @user.instrument.name %>
+	</p>
+	<p>
 	  <b>Tipo de Camisa:</b>
 	  <%= @user.shirt_type.name %>
 	</p>
 	<p>
 	  <b>Tamanho:</b>
 	  <%= @user.shirt_size.name %>
-	</p>
-	<p>
-	  <b>Instrumento:</b>
-	  <%= @user.instrument.name %>
 	</p>
   </body>
 </html>
