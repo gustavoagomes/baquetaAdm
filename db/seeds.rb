@@ -27,8 +27,8 @@
 #                   { name: 'TANTAM' }
 #                 ])
 
-#User.destroy_all 
+User.destroy_all 
 
-Branch.create([{ name: 'Baqueta - CE'}, 
-                { name: 'Baqueta - RJ' }])
+#Branch.create([{ name: 'Baqueta - CE'}, 
+#                { name: 'Baqueta - RJ' }])
 
