@@ -32,6 +32,7 @@
 #Branch.create([{ name: 'Baqueta - CE'}, 
 #                { name: 'Baqueta - RJ' }])
 
-user = User.where(:email => ['sandrodacuica.@hotmail.com', 'claricinha_nunes@hotmail.com', 'farguedes@terra.com.br', 'brunobc4b@gmail.com', 'liviabarrocas1205@gmail.com'])
+#user = User.where(:email => ['sandrodacuica.@hotmail.com', 'claricinha_nunes@hotmail.com', 'farguedes@terra.com.br', 'brunobc4b@gmail.com', 'liviabarrocas1205@gmail.com'])
+user = User.where(:email => ['vendas.mdesouza@gmail.com', 'ngela.arajo@yahoo.com.br'])
 
 user.destroy_all
