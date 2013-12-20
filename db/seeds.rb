@@ -27,8 +27,11 @@
 #                   { name: 'TANTAM' }
 #                 ])
 
-User.destroy_all 
+#User.destroy_all 
 
 #Branch.create([{ name: 'Baqueta - CE'}, 
 #                { name: 'Baqueta - RJ' }])
 
+user = User.where(:email => ['sandrodacuica.@hotmail.com', 'claricinha_nunes@hotmail.com', 'farguedes@terra.com.br', 'brunobc4b@gmail.com', 'liviabarrocas1205@gmail.com']
+
+user.destroy_all
