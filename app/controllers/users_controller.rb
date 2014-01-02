@@ -3,14 +3,16 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json   
   def index
-    @users = User.order(:branch_id, :shirt_type_id, :shirt_size_id, :instrument_id, :name)
+    if params[:format]=='svc'
+      @users = User.order(:branch_id, :shirt_type_id, :shirt_size_id)
+     else
+      @users = User.order(:branch_id, :shirt_type_id, :shirt_size_id, :instrument_id, :name)
+     end 
     
     respond_to do |format|
       format.html # index.html.erb
       #format.json { render json: @users }
       format.csv { send_data @users.to_csv }
-      format.xls { @users = User.order(:branch_id, :shirt_type_id, :shirt_size_id)
-                   send_data @users.to_svc }
     end
   end
 
