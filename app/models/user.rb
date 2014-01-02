@@ -15,6 +15,7 @@ class User < ActiveRecord::Base
 
 
   def self.to_csv(options = {})
+    #self.order(:branch_id, :shirt_type_id, :shirt_size_id, :instrument_id, :name)
     CSV.generate(options) do |csv|
       #csv << column_names
       csv << ["Nome", "Nome no Cracha", "Instrumento", "Tipo de Camisa", "Tamanho da Camisa", "Unidade"]
@@ -26,5 +27,17 @@ class User < ActiveRecord::Base
     end
   end
 
+  def self.to_svc(options = {})
+    #self.order(:branch_id, :shirt_type_id, :shirt_size_id )
+    CSV.generate(options) do |csv|
+      #csv << column_names
+      csv << ["Nome", "Nome no Cracha", "Instrumento", "Tipo de Camisa", "Tamanho da Camisa", "Unidade"]
+      all.each do |user|
+        #csv << user.attributes.values_at(name) + user.attributes.values_at(instrument.name)
+        #csv << user.attributes.values_at(*column_names)
+        csv << [user.name, user.name_tag, user.instrument.name, user.shirt_type.name, user.shirt_size.name, user.branch.name]
+      end
+    end
+  end
 
 end
