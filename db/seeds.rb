@@ -37,11 +37,12 @@
 
 #Instrument.create([{ name: 'HARMONIA'}])
 
-user = User.where(:email => ['marciovox_@hotmail.com', 'filipegarciamoreira@hotmail.com', 'rubensgouveia@gmail.com'])
+#inst = Instrument.where(:name => 'HARMONIA')
 
-user.instrument_id = 11
+User.where(:email => ['marciovox_@hotmail.com', 
+                       'filipegarciamoreira@hotmail.com', 
+                       'rubensgouveia@gmail.com']).update_all(instrument_id: 11)
 
-user.save
 
 #user.destroy_all
 
