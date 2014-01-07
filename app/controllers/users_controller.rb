@@ -1,12 +1,14 @@
 class UsersController < ApplicationController
 
+  before_filter :load_instruments, :only => [:new, :edit, :update, :create]
+  
   # GET /users
   # GET /users.json   
   def index
     if params[:format]=='svc'
       @users = User.order(:branch_id, :shirt_type_id, :shirt_size_id)
      else
-      @users = User.order(:branch_id, :shirt_type_id, :shirt_size_id, :instrument_id, :name)
+      @users = User.order(:branch_id, :instrument_id, :name)
      end 
     
     respond_to do |format|
@@ -30,8 +32,8 @@ class UsersController < ApplicationController
 
   # GET /users/new
   # GET /users/new.json
-  def new
-    @user = User.new
+  def new    
+    @user = User.new    
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @user }
@@ -92,5 +94,10 @@ class UsersController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  protected
+    def load_instruments
+      @instruments = Instrument.order(:name)
+    end
 
 end

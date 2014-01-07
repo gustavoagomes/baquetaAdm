@@ -33,6 +33,12 @@
 #                { name: 'Baqueta - RJ' }])
 
 #user = User.where(:email => ['sandrodacuica.@hotmail.com', 'claricinha_nunes@hotmail.com', 'farguedes@terra.com.br', 'brunobc4b@gmail.com', 'liviabarrocas1205@gmail.com'])
-user = User.where(:email => ['raquelfontenele@gmail.com'])
+#user = User.where(:email => ['raquelfontenele@gmail.com'])
+
+Instrument.create([{ name: 'HARMONIA'}])
+
+user = User.where(:email => ['ligiapiria@hotmail.com'])
 
 user.destroy_all
+
+
