@@ -35,10 +35,14 @@
 #user = User.where(:email => ['sandrodacuica.@hotmail.com', 'claricinha_nunes@hotmail.com', 'farguedes@terra.com.br', 'brunobc4b@gmail.com', 'liviabarrocas1205@gmail.com'])
 #user = User.where(:email => ['raquelfontenele@gmail.com'])
 
-Instrument.create([{ name: 'HARMONIA'}])
+#Instrument.create([{ name: 'HARMONIA'}])
 
-user = User.where(:email => ['ligiapiria@hotmail.com'])
+user = User.where(:email => ['marciovox_@hotmail.com', 'filipegarciamoreira@hotmail.com', 'rubensgouveia@gmail.com'])
 
-user.destroy_all
+user.instrument_id = 11
+
+user.save
+
+#user.destroy_all
 
 
