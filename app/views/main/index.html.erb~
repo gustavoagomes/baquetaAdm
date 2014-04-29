@@ -3,7 +3,7 @@
         <h1>BA-QUE-TA! (TUM)</h1>
 		<p class="lead">Informe aqui o tamanho de sua camisa, além de e-mail e informações adicionais.</p>
         <p>
-          <a class="btn btn-lg btn-danger" href="" role="button">Não posso me Cadastrar :(</a>
+          <a class="btn btn-lg btn-danger" href="/users" role="button">Não posso me Cadastrar :(</a>
         </p>
       </div>
       <div class="row text-center">
