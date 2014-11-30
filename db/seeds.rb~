@@ -39,11 +39,11 @@
 
 #inst = Instrument.where(:name => 'HARMONIA')
 
-User.where(:email => ['marciovox_@hotmail.com', 
-                       'filipegarciamoreira@hotmail.com', 
-                       'rubensgouveia@gmail.com']).update_all(instrument_id: 11)
+#User.where(:email => ['marciovox_@hotmail.com', 
+#                       'filipegarciamoreira@hotmail.com', 
+#                       'rubensgouveia@gmail.com']).update_all(instrument_id: 11)
 
-
-#user.destroy_all
+user = User.where(:email => ['gustavo@blocodobaqueta.com.br'])
+user.destroy_all
 
 
