@@ -39,8 +39,9 @@
 
 #inst = Instrument.where(:name => 'HARMONIA')
 
+#'ajalmar@gmail.com',
 User.where(:email => ['achernarsouza@gmail.com',
-'ajalmar@gmail.com', 'alerope@uol.com.br','byalexsilva@gmail.com','lemos_representa@hotmail.com', 'contato@allansales.com.br','almir.ramalho@hotmail.com','paulafrotta@bol.com.br','anapaulaponce@hotmail.com',
+'alerope@uol.com.br','byalexsilva@gmail.com','lemos_representa@hotmail.com', 'contato@allansales.com.br','almir.ramalho@hotmail.com','paulafrotta@bol.com.br','anapaulaponce@hotmail.com',
 'anamyrian@gmail.com','andrearope@hotmail.com','andrealeav@gmail.com','ap_cavalcante@yahoo.com.br',
 'annesorayabb@hotmail.com','b.marques@live.com','kaio_kosta@hotmail.com','camilalmada@hotmail.com',
 'Mila.marques3@hotmail.com','camillarcastro@hotmail.com','carolinavili@yahoo.com.br',
