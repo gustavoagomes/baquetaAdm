@@ -18,11 +18,11 @@ class User < ActiveRecord::Base
     #self.order(:branch_id, :shirt_type_id, :shirt_size_id, :instrument_id, :name)
     CSV.generate(options) do |csv|
       #csv << column_names
-      csv << ["Nome", "Nome no Cracha", "Instrumento", "Tipo de Camisa", "Tamanho da Camisa", "Unidade"]
+      csv << ["Nome", "Nome no Cracha", "Instrumento", "Tipo de Camisa", "Tamanho da Camisa", "Unidade", "Email", "Ativo"]
       all.each do |user|
         #csv << user.attributes.values_at(name) + user.attributes.values_at(instrument.name)
         #csv << user.attributes.values_at(*column_names)
-        csv << [user.name, user.name_tag, user.instrument.name, user.shirt_type.name, user.shirt_size.name, user.branch.name]
+        csv << [user.name, user.name_tag, user.instrument.name, user.shirt_type.name, user.shirt_size.name, user.branch.name, user.email, user.is_active]
       end
     end
   end

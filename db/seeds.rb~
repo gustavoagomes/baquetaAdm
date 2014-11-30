@@ -15,16 +15,35 @@
 #ShirtSize.create([{ name: 'P' }, { name: 'M' }, { name: 'G' }, { name: 'GG' }, { name: 'GGG' }, { name: 'GGGG' }])
 #ShirtType.create([{ name: 'MASCULINA' }, { name: 'BABYLOOK' }])
 
-Instrument.create([{ name: 'AGOGÔ'}, 
-                   { name: 'CAIXA' },
-                   { name: 'CHOCALHO' },
-                   { name: 'CUÍCA' },
-                   { name: 'MARCAÇÃO' },
-                   { name: 'RECO-RECO' },
-                   { name: 'REPICAIXA' },
-                   { name: 'REPIQUE' },
-                   { name: 'TAMBORIM' },
-                   { name: 'TANTAM' }
-                 ])
+#Instrument.create([{ name: 'AGOGÔ'}, 
+#                   { name: 'CAIXA' },
+#                   { name: 'CHOCALHO' },
+#                   { name: 'CUÍCA' },
+#                   { name: 'MARCAÇÃO' },
+#                   { name: 'RECO-RECO' },
+#                   { name: 'REPICAIXA' },
+#                   { name: 'REPIQUE' },
+#                   { name: 'TAMBORIM' },
+#                   { name: 'TANTAM' }
+#                 ])
+
+#User.destroy_all 
+
+#Branch.create([{ name: 'Baqueta - CE'}, 
+#                { name: 'Baqueta - RJ' }])
+
+#user = User.where(:email => ['sandrodacuica.@hotmail.com', 'claricinha_nunes@hotmail.com', 'farguedes@terra.com.br', 'brunobc4b@gmail.com', 'liviabarrocas1205@gmail.com'])
+#user = User.where(:email => ['raquelfontenele@gmail.com'])
+
+#Instrument.create([{ name: 'HARMONIA'}])
+
+#inst = Instrument.where(:name => 'HARMONIA')
+
+User.where(:email => ['marciovox_@hotmail.com', 
+                       'filipegarciamoreira@hotmail.com', 
+                       'rubensgouveia@gmail.com']).update_all(instrument_id: 11)
+
+
+#user.destroy_all
 
 
