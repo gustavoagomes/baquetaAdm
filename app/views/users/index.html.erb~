@@ -9,7 +9,6 @@
 	    <th>Instrumento</th>
 	    <th>Tipo de Camisa</th>
 	    <th>Tamanho da Camisa</th>
-	    <th></th>
 	  </tr>
 	
 	<% @users.each do |user| %>
@@ -20,7 +19,6 @@
 	    <td><%= user.instrument.name %></td>
 	    <td><%= user.shirt_type.name %></td>
 	    <td><%= user.shirt_size.name %></td>
-   	    <td><%= link_to image_tag('btn_row_edit.gif', :title => "Editar"), edit_user_path(user) %></td>
 	  </tr>
 	<% end %>
 
