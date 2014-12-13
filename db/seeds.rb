@@ -40,22 +40,7 @@
 #inst = Instrument.where(:name => 'HARMONIA')
 
 
-User.where(:email => ['ajalmar@gmail.com','cmtchristina@gmail.com','claricinha_nunes@hotmail.com',
-'cyndl@ig.com.br','danimarreiro@yahoo.com.br','damasco_9@hotmail.com','deborasilva@me.com',
-'denayre@hotmail.com','didiprc@gmail.com','maxwill@gmail.com','edinhocavalcante@gmail.com',
-'manuborelli@hotmail.com','emanuelleaguiar@hotmail.com','Emanuel_fic@yahoo.com.br',
-'ericamayara@yahoo.com.br','fernandaborgescavalli@hotmail.com','contato@barataodairrigacao.com.br',
-'farguedes@terra.com.br','eudeslima_ef_@hotmail.com','gcrisostomo@outlook.com','glauber_bezerra@hotmail.com',
-'gardenia_l@ymail.com','jpaulofarias18@gmail.com','rafaelpkd@gmail.com','ju25fb@hotmail.com',
-'julianamholanda@hotmail.com','juliana3437@yahoo.com.br','karolximenes@gmail.com','nascimento.leandro@gmail.com',
-'liamoura@gmail.com','gardenlk@hotmail.com','lucianamariavs@gmail.com','marcelladealcantara@gmail.com',
-'meneodonto@gmail.com','mariateresaribeiroaguiar@yahoo.com.br','marilenegondim@hotmail.com',
-'marilia_be@hotmail.com','mauriciomedeiros73@gmail.com','millerbarreto@gmail.com','niqueporto@gmail.com',
-'munikyk@hotmail.com','a.nagela@yahoo.com.br','Pasconithfranklin@hotmail.com','pedropcneto@hotmail.com',
-'piterasj@gmail.com','raquelholand@gmail.com','raylanra@gmail.com','lucyregi@hotmail.com','rejaness@gmail.com',
-'rogeri10o@yahoo.com.br','romarionoliveira@gmail.com','rubensgouveia@gmail.com','sandrodacuica@hotmail.com',
-'shyrleyssouza@gmail.com','tatianisodre_88@hotmail.com','tamagalhaes@yahoo.com.br','thaisdalencar@gmail.com',
-'thaisoponte@gmail.com','Vitorth@yahoo.com.br','viviannyjacome@hotmail.com']).update_all(is_active: 'N')
+User.where(:email => ['pedro-parente1@hotmail.com']).update_all(is_active: 'N')
 
 #user = User.where(:email => ['gustavo@blocodobaqueta.com.br'])
 #user.destroy_all

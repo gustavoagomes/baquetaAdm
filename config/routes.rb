@@ -11,7 +11,7 @@ BaquetaAdm::Application.routes.draw do
   resources :users do
     member do
       post :notify_user
- #     get "show"
+      get "show"
     end
   end
   
