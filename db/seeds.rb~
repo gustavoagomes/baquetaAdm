@@ -40,7 +40,7 @@
 #inst = Instrument.where(:name => 'HARMONIA')
 
 #pedro-parente1@hotmail.com pedropcneto@hotmail.com 
-User.where(:instrument_id => [7]).update_all(:instrument_id: 2)
+User.where(:instrument_id => [7]).update_all(:instrument_id : '2')
 
 #user = User.where(:email => ['gustavo@blocodobaqueta.com.br'])
 #user.destroy_all
