@@ -37,7 +37,7 @@
 
 #Instrument.create([{ name: 'HARMONIA'}])
 
-#inst = Instrument.where(:name => 'HARMONIA')
+#inst = Instrument.where(:name => 'HARMONIA') 
 
 #pedro-parente1@hotmail.com pedropcneto@hotmail.com 
 #User.where(:email => ['pedropcneto@hotmail.com', 'gustavoagomes@gmail.com']).update_all(is_active: 'S')
