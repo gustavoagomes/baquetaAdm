@@ -1,3 +1,8 @@
+<p>
+  <a class="btn btn-lg btn-primary" href="/users.csv" role="button" >Gerar CSV</a>
+  <a class="btn btn-lg btn-success" href="/users.csv?format=svc" role="button" >Relatório para SVC</a>
+</p>
+
 <div class="panel panel-primary">
   <div class="panel panel-heading"><h2>Integrantes</h2></div>  
 	
@@ -9,6 +14,7 @@
 	    <th>Instrumento</th>
 	    <th>Tipo de Camisa</th>
 	    <th>Tamanho da Camisa</th>
+	    <th></th>
 	  </tr>
 	
 	<% @users.each do |user| %>
@@ -19,6 +25,7 @@
 	    <td><%= user.instrument.name %></td>
 	    <td><%= user.shirt_type.name %></td>
 	    <td><%= user.shirt_size.name %></td>
+   	    <td><%= link_to image_tag('btn_row_edit.gif', :title => "Editar"), edit_user_path(user) %></td>
 	  </tr>
 	<% end %>
 
