@@ -45,9 +45,9 @@
 
 #User.where(:email => ['vivian@websitefortaleza.com.br', 'sherida_stite@hotmail.com', 'jubvmm@hotmail.com']).update_all(instrument_id: 1)
 
-User.where(:email => ['manu.ceara@gmail.com', 'jackieslima@gmail.com', 'renatoqdiogenes@gmail.com']).update_all(instrument_id: 5)
+#User.where(:email => ['manu.ceara@gmail.com', 'jackieslima@gmail.com', 'renatoqdiogenes@gmail.com']).update_all(instrument_id: 5)
 
-#User.where(:email => ['amileirbag@gmail.com']).update_all(instrument_id: 8)
+User.where(:email => ['amileirbag@gmail.com']).update_all(instrument_id: 8)
 
 #User.where(:email => ['ger_manna@hotmail.com']).update_all(shirt_size_id: 5)
 
