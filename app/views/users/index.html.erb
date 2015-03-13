@@ -21,9 +21,9 @@
 	    <td><%= user.name %></td>
 	    <td><%= user.name_tag %></td>
 	    <td><%= user.email %></td>
-	    <td><%= user.instrument.name %></td>
-	    <td><%= user.shirt_type.name %></td>
-	    <td><%= user.shirt_size.name %></td>
+	    <td><%= user.instrument_id %></td>
+	    <td><%= user.shirt_type_id %></td>
+	    <td><%= user.shirt_size_id %></td>
    	    <td><%= link_to image_tag('btn_row_edit.gif', :title => "Editar"), edit_user_path(user) %></td>
 	  </tr>
 	<% end %>
